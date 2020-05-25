@@ -14,7 +14,7 @@
   "main": "app.jsx",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "babel ./src -d dist --copy-files",
+    "build": "webpack --mode production",
     "test": "jest"
   },
   "author": "Mohit Saxena",
@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.13.1",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
