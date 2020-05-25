@@ -10,7 +10,7 @@ import Anchor from '../../commonHtmlComponents/Anchor';
 
 
 export default function Sidebar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const menuButtonHandler = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,7 +35,7 @@ export default function Sidebar() {
               </Div>
             </nav>
             <Anchor className="menuIconClose" onClick={menuButtonHandler}>
-              <AiOutlineClose className="closeIcon" />
+              <AiOutlineClose className="closeIcon" size="1em" />
             </Anchor>
           </>
         )
