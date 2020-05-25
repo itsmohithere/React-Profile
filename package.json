@@ -14,6 +14,7 @@
   "main": "app.jsx",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "build": "babel ./src -d dist --copy-files",
     "test": "jest"
   },
   "author": "Mohit Saxena",
