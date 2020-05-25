@@ -4,6 +4,7 @@ import Routes from './Routes';
 import CtxApp from './components/contextAPI/ctxApp';
 import './assets/styles/scss/app.scss';
 
+// Entry point
 function App() {
   return (
     <CtxApp>
