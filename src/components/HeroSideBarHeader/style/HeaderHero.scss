@@ -1,0 +1,59 @@
+.HeaderHeroContainer {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  color: white;
+
+  &.bgColorNone {
+    background: none;
+  }
+
+  &.bgColor {
+    background: #074d5d;
+  }
+
+  .contactButtonContainer{
+    position: absolute;
+    left: 5%;
+    width: 11%;
+    border-radius: 3px;
+    height: 5vh;
+    button{
+      background-color: #fd336e;
+      color: beige;
+      height: 100%;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    }
+  }
+
+  ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    // margin: 0.5em;
+    margin: 0 30px;
+    padding: 0.5em;
+
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: x-large;
+
+    }
+  }
+
+}

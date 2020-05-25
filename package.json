@@ -1,29 +1,62 @@
 {
   "name": "react-profile",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTest.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  },
   "version": "0.0.1",
   "description": "My profile using react",
-  "main": "app.js",
+  "main": "app.jsx",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Mohit Saxena",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.1.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "css-loader": "^1.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "file-loader": "^6.0.0",
+    "node-sass": "^4.13.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "babel-jest": "^25.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.5.4",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.20"
+    "react-hot-loader": "^4.12.20",
+    "react-icons": "^3.10.0",
+    "react-particles-js": "^3.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-test-renderer": "^16.13.1",
+    "style-loader": "^1.1.4",
+    "url-loader": "^4.1.0"
   }
 }

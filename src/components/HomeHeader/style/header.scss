@@ -1,0 +1,361 @@
+.header {
+  position: relative;
+  z-index: 1;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(21, 34, 29, 0) 0%, #074d5d 52%);
+  height: 100%;
+  margin-bottom: 70px;
+
+  // For Mobile View
+  @media (min-width: 320px) and(max-width: 767px){
+    height: 100%;
+  }
+
+  .profileImageContainer {
+    position: relative;
+    width: 100%;
+
+    // For Tablet View
+    @media (min-width: 768px) and(max-width: 1024px){
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    // For Mobile View
+    @media (min-width: 320px) and(max-width: 767px){
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .heroImageGradient {
+      width: 35%;
+      height: 88%;
+      background: black;
+      opacity: 1;
+      position: absolute;
+      z-index: -1;
+
+      @media (min-width: 768px) and (max-width: 1024px){
+        height: 100%;
+      }
+
+      @media (min-width: 320px) and (max-width: 767px){
+        width: 98%;
+        height: 75%;
+        top: 11%;
+        left: 1%;
+      }
+    }
+
+    .heroImage {
+
+      width: 35%;
+      
+      @media (min-width: 768px) and (max-width: 1024px){
+        height: 55vh;
+        width: 85%;
+        overflow: hidden;
+        margin: 10% 0% 0% 8%;
+      } 
+      
+      // For Mobile View
+      @media (min-width: 320px) and(max-width: 767px){
+        height: 52vh;
+        width: 94%;
+        overflow: hidden;
+        margin: 26% 0% 0% 3%;
+      }
+
+      // Landscape View
+      @media (min-width: 481px) and (max-width: 767px) {
+  
+        height: 75vh;
+        width: 94%;
+        overflow: hidden;
+        margin: 16% 0% 0% 3%;
+        
+      }
+      // @media (min-width: 312px) and (max-width: 1024px){
+      //   height: 55vh;
+      //   width: 85%;
+      //   overflow: hidden;
+      //   margin: 10% 0% 0% 8%;
+      // } 
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 7vh 0% 0% 7vh;
+
+        @media (min-width: 768px) and(max-width: 1024px){
+          max-width: 100%;
+          max-height: none;
+          margin: -20vh 0% 0% 0vh;
+        }
+
+        // For Mobile View
+        @media (min-width: 320px) and(max-width: 767px){
+          max-width: 100%;
+          max-height: none;
+          margin: -9vh 0% 0% 0vh;
+        }
+
+        // Landscape View
+        @media (min-width: 481px) and (max-width: 767px) {
+    
+          max-width: 100%;
+          max-height: none;
+          margin: -21vh 0% 0% 0vh;
+          
+        }
+
+      }
+
+    }
+  
+    .heroName {
+      position: absolute;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.5vw;
+      color: black;
+      align-self: center;
+      top: 1%;
+      right: 2%;
+
+      // For Mobile View
+      @media (min-width: 320px) and(max-width: 767px){
+        font-size: 15px;
+      }
+
+      @media (min-width: 768px) and(max-width: 1024px){
+        font-size: 2vw;
+      }
+
+      h1{
+        color: azure;
+        text-decoration: none;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @keyframes moveInLeft {
+          0% {
+            opacity: 0;
+            transform: translate(-100px);
+          }
+        
+          80% {
+            transform: translate(10px);
+          }
+        
+          100% {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+
+      }
+
+      span{
+        color: cornsilk;
+        animation: moveInRight 4s;
+
+        @keyframes moveInRight {
+          0% {
+            opacity: 0;
+            transform: translate(100px);
+          }
+        
+          80% {
+            transform: translate(-10px);
+          }
+        
+          100% {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+      }
+    }
+
+    .heroQuote{
+      position: absolute;
+      top: 37%;
+      left: 45%;
+
+      @media (min-width: 768px) and(max-width: 1024px){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 4%;
+        position: initial;
+      }
+
+      // For Mobile View
+      @media (min-width: 320px) and(max-width: 767px){
+        position: initial;
+        margin-top: 0;
+      }
+
+      .theQuoteDiv {
+        @media (min-width: 768px) and(max-width: 1024px){
+          margin-left: 8%;
+          flex-basis: 30%;
+        }
+
+        // For Mobile View
+        @media (min-width: 320px) and(max-width: 767px){
+          margin-left: 5%;
+          line-height: 35px;
+        }
+      }
+
+      .heart{
+        color: #fe335e;
+      }
+      span{
+        font-size: 30px;
+      }
+      p{
+        font-size: 4vw;
+        color: cornsilk;
+
+        // For Mobile View
+        @media (min-width: 320px) and(max-width: 767px){
+          font-size: 6vw;
+        }
+      }
+      
+      .anmWord{
+        font-size: 4vw;
+        width: 100%;
+        height: 100%;
+        margin: -17% 0% 17% 90%;
+        
+        // For Mobile View
+        @media (min-width: 320px) and(max-width: 767px){
+          margin: initial;
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+        }
+      }
+
+      .secondLine{
+        position: relative;
+
+        .anmWord span{
+          position: absolute;
+          opacity: 0;
+          overflow: hidden;
+          font-size: 4vw;
+          color: cornsilk;
+          margin-left: 8%;
+  
+          @media (min-width: 768px) and(max-width: 1024px){
+            margin-left: initial;
+            left: 0%;
+            top: 90%;
+          }
+
+          // For Mobile View
+          @media (min-width: 320px) and(max-width: 767px){
+            width: 50%;
+            top: 0;
+            left: 36%;
+            font-size: 6vw;
+          }
+        }
+  
+        @keyframes rotateWordsFirst {
+          0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+          8% { opacity: 1; height: 60px; }
+          19% { opacity: 1; height: 60px; }
+          25% { opacity: 0; height: 60px; }
+          100% { opacity: 0; }
+        }
+  
+        .anmWord span{
+          animation: rotateWordsFirst 12s linear infinite 0s;
+        }
+        .anmWord span:nth-child(2) { 
+          animation-delay: 2s; 
+        }
+        .anmWord span:nth-child(3) { 
+          animation-delay: 4s; 
+        }
+        .anmWord span:nth-child(4) { 
+          animation-delay: 6s; 
+        }
+
+      }
+
+    }
+  }
+
+  
+  .socialLinkContainer {
+    position: absolute;
+    width: 50vw;
+
+    @media (min-width: 768px) and(max-width: 1024px){
+      width: initial;
+      position: relative;
+    }
+
+    // For Mobile View
+    @media (min-width: 320px) and(max-width: 767px){
+      position: initial;
+      width: 100vw;
+      margin-top: 20px;
+    }
+
+    >ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @media (min-width: 768px) and(max-width: 1024px){
+        margin-top: 10%;
+      }
+
+      // For Mobile View
+      @media (min-width: 320px) and(max-width: 767px){
+        position: initial;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      .gridIcon {
+        color: darkgrey;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      li {
+        padding: 0.5em;
+        flex-basis: 22%;
+        margin: 52px 10px 0px 0px;
+
+        @media (min-width: 768px) and(max-width: 1024px){
+          margin: 0px 40px 0px 0px;
+          flex-basis: 16%;
+        }
+
+        // For Mobile View
+        @media (min-width: 320px) and(max-width: 767px){
+          margin: 20px 0px 0px 0px;
+        }
+      }
+    }
+
+  }
+
+}
