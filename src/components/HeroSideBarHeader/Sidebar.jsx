@@ -35,7 +35,7 @@ export default function Sidebar() {
               </Div>
             </nav>
             <Anchor className="menuIconClose" onClick={menuButtonHandler}>
-              <AiOutlineClose className="closeIcon" />
+              <AiOutlineClose className="closeIcon" size="1em" />
             </Anchor>
           </>
         )
