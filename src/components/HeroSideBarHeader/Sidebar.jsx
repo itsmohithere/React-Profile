@@ -10,7 +10,7 @@ import Anchor from '../../commonHtmlComponents/Anchor';
 
 
 export default function Sidebar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuButtonHandler = () => {
     setIsMenuOpen(!isMenuOpen);
