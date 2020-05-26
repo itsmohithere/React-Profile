@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../components';
 import HeroSideBarHeader from '../components/HeroSideBarHeader/HeroSideBarHeader';
 import { AppContext } from '../components/contextAPI/ctxApp';
+import ScrollTop from '../components/ScrollTop/ScrollTop';
 
 const SwitchRoute = () => (
   <Switch>
@@ -17,6 +18,7 @@ function Routes() {
   return (
     <BrowserRouter>
       <HeroSideBarHeader>
+        <ScrollTop />
         <SwitchRoute />
       </HeroSideBarHeader>
     </BrowserRouter>
