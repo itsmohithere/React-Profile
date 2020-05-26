@@ -7,10 +7,7 @@ export default function HeroImage() {
     <>
       <Div className="heroImageGradient" />
       <Div className="heroImage">
-        {/* <Image src={HeroImg} alt="heroImage" /> */}
-        {/* <Div className="heroImageDiv"> */}
-          <Image src={HeroImg} alt="heroImage" />
-        {/* </Div> */}
+        <Image src={HeroImg} alt="heroImage" />
       </Div>
     </>
   );
