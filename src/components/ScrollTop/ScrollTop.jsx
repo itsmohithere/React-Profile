@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
 import { Div } from '../../commonHtmlComponents';
 import './scrolltop.scss';
+import WithScreenSize from '../../commonComponents/HOC/withScreenSize';
 
 
 export default function ScrollTop() {
@@ -15,24 +16,30 @@ export default function ScrollTop() {
     });
   };
 
-  const scrollDispHandler = () => {
-    if (window.scrollY >= 400) {
-      setIsScroll(true);
-    } else {
-      setIsScroll(false);
+  const scrollDispHandler = (unmount) => {
+    if (!unmount) {
+      if (window.scrollY >= 400) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollDispHandler, true);
+    let unmount = false;
+    window.addEventListener('scroll', () => scrollDispHandler(unmount), true);
     return (() => {
-      window.removeEventListener('scroll', scrollDispHandler);
+      unmount = true;
+      window.removeEventListener('scroll', () => scrollDispHandler(unmount));
     });
   }, []);
 
   return isScroll && (
-    <Div className="scrollTop" onClick={scrollToTopHandler}>
-      <FaArrowAltCircleUp size="3em" />
-    </Div>
+    <WithScreenSize device={['tablet', 'mobile']}>
+      <Div className="scrollTop" onClick={scrollToTopHandler}>
+        <FaArrowAltCircleUp size="3em" />
+      </Div>
+    </WithScreenSize>
   );
 }
