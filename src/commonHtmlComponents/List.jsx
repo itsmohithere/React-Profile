@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const ListLi = ({ children, ...rest }) => <li {...rest}>{ children }</li>;
 
 ListLi.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.array]).isRequired,
 };
 
 export const ListUl = ({ children, ...rest }) => (
@@ -12,5 +12,5 @@ export const ListUl = ({ children, ...rest }) => (
 );
 
 ListUl.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.array]).isRequired,
 };

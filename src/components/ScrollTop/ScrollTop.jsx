@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
+import { ForDevice } from 'media-query-react';
 import { Div } from '../../commonHtmlComponents';
 import './scrolltop.scss';
-import WithScreenSize from '../../commonComponents/HOC/withScreenSize';
 
 
 export default function ScrollTop() {
@@ -36,10 +36,10 @@ export default function ScrollTop() {
   }, []);
 
   return isScroll && (
-    <WithScreenSize device={['tablet', 'mobile']}>
+    <ForDevice deviceName={['tablet', 'mobile']}>
       <Div className="scrollTop" onClick={scrollToTopHandler}>
         <FaArrowAltCircleUp size="3em" />
       </Div>
-    </WithScreenSize>
+    </ForDevice>
   );
 }

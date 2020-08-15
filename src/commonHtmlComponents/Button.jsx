@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button({
-  children, className, type, ...rest
+  children, type, ...rest
 }) {
   return (
-    <button type={type} {...rest}>
+    <button type="button" {...rest}>
       { children }
     </button>
   );

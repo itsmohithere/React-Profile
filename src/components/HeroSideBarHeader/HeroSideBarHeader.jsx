@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { ForDevice } from 'media-query-react';
 import {
   Div,
 } from '../../commonHtmlComponents';
 import './style/HeaderHero.scss';
 import Header from './Header';
-import WithScreenSize from '../../commonComponents/HOC/withScreenSize';
 import Sidebar from './Sidebar';
 
 function HeroSideBarHeader({ children }) {
   return (
     <Div>
-      <WithScreenSize device={['tablet', 'desktop']}>
+      <ForDevice deviceName={['tablet', 'desktop']}>
         <Header />
-      </WithScreenSize>
-      <WithScreenSize device="mobile">
+      </ForDevice>
+      <ForDevice deviceName={['mobile', 'mobileLandscape']}>
         <Sidebar />
-      </WithScreenSize>
+      </ForDevice>
       { children }
     </Div>
   );
 }
 
 HeroSideBarHeader.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default withRouter(HeroSideBarHeader);

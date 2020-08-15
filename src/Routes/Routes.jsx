@@ -13,7 +13,6 @@ const SwitchRoute = () => (
 
 function Routes() {
   const value = useContext(AppContext);
-  console.log(value);
 
   return (
     <BrowserRouter>

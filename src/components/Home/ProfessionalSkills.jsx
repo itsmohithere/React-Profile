@@ -7,7 +7,7 @@ import Card from '../../commonComponents/Card/Card';
 
 export default function ProfessionalSkills() {
   return (
-    <Div className="container professionalContainer">
+    <Div className="container professionalContainer" id="professionalSkills">
       <H1>Professional Skills</H1>
       <Card className="professionalCard">
         <ListUl>
