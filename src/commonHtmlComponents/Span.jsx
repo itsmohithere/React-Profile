@@ -7,8 +7,12 @@ const Span = ({ children, ...rest }) => (
   </span>
 );
 
+Span.defaultProps = {
+  children: '',
+};
+
 Span.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.array]),
 };
 
 export default Span;

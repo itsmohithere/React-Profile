@@ -15,20 +15,20 @@
   .contactButtonContainer{
     position: absolute;
     left: 5%;
-    width: 11%;
-    border-radius: 3px;
-    height: 40px;
-    button{
+    
+    a{
       background-color: #fd336e;
       color: beige;
       height: 100%;
       border-radius: 5px;
       width: 100%;
+      padding: 5px 10px;
+      border: 2px solid;
     }
-
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
     }
   }
 

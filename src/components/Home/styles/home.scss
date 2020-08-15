@@ -177,13 +177,48 @@
 
         button{
           flex-basis: 28%;
-
+          color: white;
+          background: black;
+          display: none;
+          &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+          }
           @media screen and (max-width: 768px){
             flex-basis: 16%;
           }
         }
+
+        .animateProjectButton{
+          display: block;
+          position: relative;
+          animation-name: prodMoveInLeft;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+        }
+
+        @keyframes prodMoveInLeft {
+          0% {
+            opacity: 0;
+            transform: translate(-100px);
+          }
+
+          80% {
+            transform: translate(10px);
+          }
+
+          100% {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+
       }
 
     }
   }
+
+}
+.slidingPaneContainer {
+  width: 100%;
 }

@@ -14,6 +14,6 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  children: PropTypes.arrayOf([PropTypes.string]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]).isRequired,
   className: PropTypes.string,
 };
